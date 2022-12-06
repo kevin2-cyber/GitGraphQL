@@ -1,10 +1,22 @@
+import 'package:ecommerce_app/app/ui/intro.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class App extends StatelessWidget {
   const App({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp();
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      themeMode: ThemeMode.system,
+      theme: ThemeData.light().copyWith(
+        textTheme: GoogleFonts.lexendDecaTextTheme(),
+      ),
+      darkTheme: ThemeData.dark().copyWith(
+        textTheme: GoogleFonts.lexendDecaTextTheme(),
+      ),
+      home: const Intro()
+    );
   }
 }
