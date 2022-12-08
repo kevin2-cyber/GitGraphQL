@@ -4,6 +4,7 @@ import 'package:google_fonts/google_fonts.dart';
 
 void main() {
 
+  // a better error screen
   ErrorWidget.builder = (FlutterErrorDetails details) => Material(
     color: Colors.greenAccent.shade100,
     child: Center(
