@@ -7,7 +7,9 @@ class Intro extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        decoration: const BoxDecoration(),
+        decoration: const BoxDecoration(
+          color: Colors.black,
+        ),
       ),
     );
   }
