@@ -12,9 +12,11 @@ class App extends StatelessWidget {
       themeMode: ThemeMode.system,
       theme: ThemeData.light().copyWith(
         textTheme: GoogleFonts.lexendDecaTextTheme(),
+        visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       darkTheme: ThemeData.dark().copyWith(
         textTheme: GoogleFonts.lexendDecaTextTheme(),
+        visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       home: const Intro()
     );
