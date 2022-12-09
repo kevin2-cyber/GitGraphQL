@@ -11,11 +11,13 @@ class App extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       themeMode: ThemeMode.system,
       theme: ThemeData.light().copyWith(
-        textTheme: GoogleFonts.lexendDecaTextTheme(),
+        primaryTextTheme: GoogleFonts.poppinsTextTheme(Theme.of(context).primaryTextTheme),
+        textTheme: GoogleFonts.lexendDecaTextTheme(Theme.of(context).textTheme),
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       darkTheme: ThemeData.dark().copyWith(
-        textTheme: GoogleFonts.lexendDecaTextTheme(),
+        primaryTextTheme: GoogleFonts.poppinsTextTheme(Theme.of(context).primaryTextTheme),
+        textTheme: GoogleFonts.lexendDecaTextTheme(Theme.of(context).textTheme),
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       home: const Intro()
