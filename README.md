@@ -1,3 +1,3 @@
 # E-commerce-app
-This is how the ui looks like
+This is the design for the ui
 ![](assets/screens/ecommerce.png)
