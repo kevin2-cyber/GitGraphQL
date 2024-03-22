@@ -50,7 +50,7 @@ class _HomeScreenState extends State<HomeScreen> {
           }
 
           return ListView.builder(
-            physics: BouncingScrollPhysics(
+            physics: const BouncingScrollPhysics(
               decelerationRate: ScrollDecelerationRate.fast
             ),
             itemCount: repositories.length,
