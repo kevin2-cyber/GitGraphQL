@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gitgraph/constants.dart';
+import 'package:gitgraph/home.dart';
 
 class GitGraph extends StatelessWidget {
   const GitGraph({super.key});
@@ -9,7 +10,7 @@ class GitGraph extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(fontFamily: AppConstants.fontFamily),
-      home: Scaffold(),
+      home: const HomeScreen(),
     );
   }
 }
