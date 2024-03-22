@@ -8,20 +8,20 @@ class HomeScreen extends StatefulWidget {
   State<HomeScreen> createState() => _HomeScreenState();
 }
 
-String readRepositories = """
-  query ReadRepositories(\$nRepositories: Int!) {
-    viewer {
-      repositories(last: \$nRepositories) {
-        nodes {
-          id
-          name
-          viewerHasStarred
-          description
+  String readRepositories = """
+    query ReadRepositories(\$nRepositories: Int!) {
+      viewer {
+        repositories(last: \$nRepositories) {
+          nodes {
+            id
+            name
+            viewerHasStarred
+            description
+          }
         }
       }
     }
-  }
-""";
+  """;
 
 class _HomeScreenState extends State<HomeScreen> {
   @override
