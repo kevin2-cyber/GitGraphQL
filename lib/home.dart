@@ -16,6 +16,7 @@ String readRepositories = """
           id
           name
           viewerHasStarred
+          description
         }
       }
     }
@@ -49,20 +50,29 @@ class _HomeScreenState extends State<HomeScreen> {
             return const Text('No repositories');
           }
 
-          return ListView.builder(
-            physics: const BouncingScrollPhysics(
-              decelerationRate: ScrollDecelerationRate.fast
+          return SafeArea(
+            child: ListView.builder(
+              physics: const BouncingScrollPhysics(
+                decelerationRate: ScrollDecelerationRate.fast
+              ),
+              itemCount: repositories.length,
+              itemBuilder: (context, index) {
+                final repository = repositories[index];
+            
+                return Card.outlined(
+                  child: ListTile(
+                      title: Text(
+                      repository['name'] ?? '',
+                    style: Theme.of(context).textTheme.titleLarge,
+                  ),
+                    subtitle: Text(
+                      repository['description'] ?? '',
+                      style: Theme.of(context).textTheme.titleSmall,
+                    ),
+                  ),
+                );
+              },
             ),
-            itemCount: repositories.length,
-            itemBuilder: (context, index) {
-              final repository = repositories[index];
-
-              return ListTile(
-                  title: Text(
-                  repository['name'] ?? '',
-                style: Theme.of(context).textTheme.titleLarge,
-              ));
-            },
           );
         },
       ),
